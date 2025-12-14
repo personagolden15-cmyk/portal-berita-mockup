@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout Modern - Beranda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="index.html">Web<span>Layout</span></a></div>
+                <div class="mobile-menu">☰</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="features.html">Fitur</a></li>
+                        <li><a href="about.html">Tentang</a></li>
+                        <li><a href="testimonials.html">Testimoni</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Website Layout Modern & Responsif</h1>
+                <p>Solusi terbaik untuk kebutuhan website Anda dengan desain yang menarik dan performa optimal di semua perangkat.</p>
+                <a href="contact.html" class="btn">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container" style="padding: 50px 0; text-align: center;">
+            <p style="font-size: 1.2em; color: #555;">Jelajahi keunggulan kami di halaman Fitur, pelajari lebih lanjut tentang tim kami di halaman Tentang, dan lihat ulasan klien di halaman Testimoni.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Tentang Kami</h3>
+                    <p>Kami adalah tim profesional yang berdedikasi untuk menciptakan website dengan desain modern dan fungsionalitas terbaik.</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Link Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="features.html">Fitur</a></li>
+                        <li><a href="about.html">Tentang</a></li>
+                        <li><a href="testimonials.html">Testimoni</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li>🏢 Contoh No. 123, Jakarta</li>
+                        <li>📧 info@weblayout.com</li>
+                        <li>📞 +62 812 3456 7890</li>
+                        <li>⏰ Senin - Jumat, 9.00 - 17.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 WebLayout. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Ambil elemen tombol dan navigasi
+        const mobileMenuBtn = document.querySelector('.mobile-menu'); 
+        const navMenu = document.querySelector('nav'); 
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        // Fungsi yang dijalankan saat tombol diklik
+        function toggleMobileMenu() {
+            // Menambah/menghapus class 'nav-open'
+            navMenu.classList.toggle('nav-open'); 
+        }
+
+        // Event Listener untuk tombol garis tiga
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        // Event Listener untuk menutup menu setelah link diklik
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Hanya hapus jika class 'nav-open' ada
+                if (navMenu.classList.contains('nav-open')) {
+                    navMenu.classList.remove('nav-open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+    <script>
+        // 1. Ambil elemen tombol dan navigasi
+        const mobileMenuBtn = document.querySelector('.mobile-menu'); 
+        const navMenu = document.querySelector('nav'); 
+        
+        // 2. Fungsi untuk menambah/menghapus class
+        function handleMenuToggle() {
+            // classList.toggle() adalah cara yang paling tepat dan andal.
+            navMenu.classList.toggle('nav-open'); 
+        }
+
+        // 3. Event Listener untuk tombol garis tiga
+        mobileMenuBtn.addEventListener('click', handleMenuToggle);
+
+        // BONUS: Tutup menu ketika link di dalam menu di-klik (pengalaman yang lebih baik di HP)
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Pastikan menu tertutup
+                navMenu.classList.remove('nav-open'); 
+            });
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>
