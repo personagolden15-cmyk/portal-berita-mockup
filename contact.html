@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - Web Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS khusus untuk halaman Kontak agar formnya tampil di tengah halaman utama */
+        .contact-page-content {
+            padding: 80px 0;
+            min-height: 60vh;
+        }
+        .contact-page-content h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #007bff;
+        }
+        /* Menggunakan style yang sudah ada dari #contact, tapi di tengah halaman */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="index.html">Web<span>Layout</span></a></div>
+                <div class="mobile-menu">☰</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html#home">Beranda</a></li>
+                        <li><a href="index.html#features">Fitur</a></li>
+                        <li><a href="index.html#about">Tentang</a></li>
+                        <li><a href="testimonials.html">Testimonial</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container contact-page-content">
+            
+            <h1>👋 Hubungi Kami</h1>
+            <p style="text-align: center; margin-bottom: 30px;">Tim kami siap membantu Anda! Silakan isi formulir atau hubungi melalui detail di bawah.</p>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" placeholder="Masukkan nama lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Masukkan alamat email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subjek</label>
+                        <input type="text" id="subject" placeholder="Subjek pesan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" placeholder="Tulis pesan Anda di sini" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Kirim Pesan</button>
+                </form>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2025 WebLayout. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+        <script>
+        // 1. Ambil elemen tombol dan navigasi
+        const mobileMenuBtn = document.querySelector('.mobile-menu'); 
+        const navMenu = document.querySelector('nav'); 
+        
+        // 2. Fungsi untuk menambah/menghapus class
+        function handleMenuToggle() {
+            // classList.toggle() adalah cara yang paling tepat dan andal.
+            navMenu.classList.toggle('nav-open'); 
+        }
+
+        // 3. Event Listener untuk tombol garis tiga
+        mobileMenuBtn.addEventListener('click', handleMenuToggle);
+
+        // BONUS: Tutup menu ketika link di dalam menu di-klik (pengalaman yang lebih baik di HP)
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Pastikan menu tertutup
+                navMenu.classList.remove('nav-open'); 
+            });
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>
