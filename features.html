@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitur Unggulan Kami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="index.html">Web<span>Layout</span></a></div>
+                <div class="mobile-menu">☰</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li class="active"><a href="features.html">Fitur</a></li>
+                        <li><a href="about.html">Tentang</a></li>
+                        <li><a href="testimonials.html">Testimoni</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <section id="features" style="padding-top: 80px;">
+                <div class="section-title">
+                    <h2>Fitur Unggulan</h2>
+                    <p>Kami menyediakan berbagai fitur terbaik untuk memenuhi kebutuhan website Anda.</p>
+                </div>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Desain Responsif</h3>
+                        <p>Website akan tampil optimal di semua perangkat, baik desktop, tablet, maupun smartphone.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Performa Cepat</h3>
+                        <p>Dibangun dengan teknologi terbaru untuk memastikan kecepatan loading yang optimal.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Keamanan Terjamin</h3>
+                        <p>Dilengkapi dengan sistem keamanan terbaik untuk melindungi data dan informasi Anda.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3>SEO Ready</h3>
+                        <p>Struktur kode yang dioptimalkan agar mudah ditemukan oleh mesin pencari seperti Google.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Kustomisasi UI/UX</h3>
+                        <p>Desain antarmuka yang dibuat khusus dan fokus pada pengalaman pengguna yang terbaik.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">☁️</div>
+                        <h3>Cloud Hosting</h3>
+                        <p>Layanan hosting cepat dan stabil menggunakan infrastruktur cloud premium.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2025 WebLayout. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // 1. Ambil elemen tombol dan navigasi
+        const mobileMenuBtn = document.querySelector('.mobile-menu'); 
+        const navMenu = document.querySelector('nav'); 
+        
+        // 2. Fungsi untuk menambah/menghapus class
+        function handleMenuToggle() {
+            // classList.toggle() adalah cara yang paling tepat dan andal.
+            navMenu.classList.toggle('nav-open'); 
+        }
+
+        // 3. Event Listener untuk tombol garis tiga
+        mobileMenuBtn.addEventListener('click', handleMenuToggle);
+
+        // BONUS: Tutup menu ketika link di dalam menu di-klik (pengalaman yang lebih baik di HP)
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Pastikan menu tertutup
+                navMenu.classList.remove('nav-open'); 
+            });
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>
