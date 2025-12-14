@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Web Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Tambahan untuk memastikan konten About tetap bagus tanpa Hero */
+        #about {
+            padding: 80px 0;
+            min-height: 70vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="index.html">Web<span>Layout</span></a></div>
+                <div class="mobile-menu">☰</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="features.html">Fitur</a></li>
+                        <li class="active"><a href="about.html">Tentang</a></li>
+                        <li><a href="testimonials.html">Testimoni</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section id="about">
+                <div class="about">
+                    <div class="about-content">
+                        <h2>Tentang Kami</h2>
+                        <p>Kami adalah tim profesional yang berdedikasi untuk menciptakan website dengan desain modern dan fungsionalitas terbaik.</p>
+                        <p>Dengan pengalaman lebih dari 5 tahun di industri web development, kami telah membantu berbagai bisnis meningkatkan kehadiran online mereka.</p>
+                        <p>Filosofi kami berpusat pada tiga pilar utama: **Desain Fungsional, Performa Tinggi, dan Dukungan Pelanggan Luar Biasa.** Kami percaya website harus bekerja sekeras mungkin untuk bisnis Anda.</p>
+                        <a href="contact.html" class="btn">Bergabung dengan Kami</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://picsum.photos/600/400?random=2" alt="Tentang Kami">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2025 WebLayout. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // 1. Deklarasi Variabel untuk mengambil elemen dari HTML
+        const mobileMenuBtn = document.querySelector('.mobile-menu'); // Tombol 'garis tiga'
+        const navMenu = document.querySelector('nav'); // Elemen <nav> yang berisi menu
+
+        // 2. Function untuk membuka/menutup menu (Sesuai Pertemuan 19)
+        function toggleMobileMenu() {
+            // classList.toggle akan menambahkan 'nav-open' jika belum ada, dan menghapusnya jika sudah ada.
+            navMenu.classList.toggle('nav-open');
+        }
+
+        // 3. Event Listener: Mendengarkan klik pada tombol 'garis tiga'
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        // BONUS: Menutup menu jika user mengklik salah satu link (khusus mobile)
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Hapus class 'nav-open' setelah link di-klik
+                navMenu.classList.remove('nav-open');
+            });
+        });
+    </script>
+
+</body>
+</html>
+    <script>
+        // 1. Ambil elemen tombol dan navigasi
+        const mobileMenuBtn = document.querySelector('.mobile-menu'); 
+        const navMenu = document.querySelector('nav'); 
+        
+        // 2. Fungsi untuk menambah/menghapus class
+        function handleMenuToggle() {
+            // classList.toggle() adalah cara yang paling tepat dan andal.
+            navMenu.classList.toggle('nav-open'); 
+        }
+
+        // 3. Event Listener untuk tombol garis tiga
+        mobileMenuBtn.addEventListener('click', handleMenuToggle);
+
+        // BONUS: Tutup menu ketika link di dalam menu di-klik (pengalaman yang lebih baik di HP)
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Pastikan menu tertutup
+                navMenu.classList.remove('nav-open'); 
+            });
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>
